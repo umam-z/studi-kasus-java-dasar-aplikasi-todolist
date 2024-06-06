@@ -10,7 +10,14 @@ public class AplikasiTodolist {
      * Menampilkan todo list
      */
     public static void showTodolist() {
+        for (int i = 0; i < model.length; i++) {
+            String todo = model[i];
+            int no = i + 1;
 
+            if (todo != null) {
+                System.out.println(no +". "+ todo);
+            }
+        }
     }
 
     /**
