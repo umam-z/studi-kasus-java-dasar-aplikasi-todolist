@@ -5,4 +5,25 @@ public class AplikasiTodolist {
     public static void main(String[] args) {
         
     }
+
+    /**
+     * Menampilkan todo list
+     */
+    public static void showTodolist() {
+
+    }
+
+    /**
+     * Menambahkan todo list
+     */
+    public static void addTodolist() {
+
+    }
+
+    /**
+     * Menghapus todo list
+     */
+    public static void removeTodolist() {
+
+    }
 }
