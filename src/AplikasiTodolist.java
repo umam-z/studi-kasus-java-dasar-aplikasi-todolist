@@ -5,7 +5,7 @@ public class AplikasiTodolist {
     public static String[] model = new String[10];
     
     public static void main(String[] args) {
-        testViewRemoveTodolist();
+        viewShowTodolist();
     }
 
     /**
@@ -141,7 +141,7 @@ public class AplikasiTodolist {
     public static void viewShowTodolist() {
         while (true) {
             
-            System.out.println("Todolist");
+            System.out.println("TODOLIST");
             showTodolist();
             
             System.out.println("Menu");
@@ -151,9 +151,9 @@ public class AplikasiTodolist {
     
             String input = input("Pilih");
             if (input.equals("1")) {
-                
+                viewAddTodolist();
             } else if(input.equals("2")) {
-                
+                viewRemoveTodolist();
             } else if(input.equals("x")) {
                 System.out.println("Bye");
                 break;
@@ -227,7 +227,7 @@ public class AplikasiTodolist {
         showTodolist();
 
         viewRemoveTodolist();
-        
+
         showTodolist();
     }
 }
