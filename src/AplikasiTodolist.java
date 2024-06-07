@@ -5,7 +5,7 @@ public class AplikasiTodolist {
     public static String[] model = new String[10];
     
     public static void main(String[] args) {
-        testViewShowTodolist();
+        testViewAddTodolist();
     }
 
     /**
@@ -181,10 +181,21 @@ public class AplikasiTodolist {
         var todo = input("x jika batal");
 
         if (todo.equals("x")) {
-            
+            // batal
         } else {
             addTodolist(todo);
         }
+    }
+
+    public static void testViewAddTodolist() {
+        addTodolist("Makan");
+        addTodolist("Belajar");
+        addTodolist("Coding");
+        addTodolist("Main Catur");
+        addTodolist("Istirahat");
+
+        viewAddTodolist();
+        viewShowTodolist();
     }
 
     /**
