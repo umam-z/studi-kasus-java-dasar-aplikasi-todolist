@@ -5,7 +5,7 @@ public class AplikasiTodolist {
     public static String[] model = new String[10];
     
     public static void main(String[] args) {
-        testViewAddTodolist();
+        testViewRemoveTodolist();
     }
 
     /**
@@ -147,7 +147,7 @@ public class AplikasiTodolist {
             System.out.println("Menu");
             System.out.println("1. Tambah");
             System.out.println("2. Hapus");
-            System.out.println("x. Hapus");
+            System.out.println("x. Batal");
     
             String input = input("Pilih");
             if (input.equals("1")) {
@@ -214,5 +214,20 @@ public class AplikasiTodolist {
             System.out.println("Gagal Menghapus Todo No " + number);
            }
         }
+    }
+
+    public static void testViewRemoveTodolist() {
+
+        addTodolist("Makan");
+        addTodolist("Belajar");
+        addTodolist("Coding");
+        addTodolist("Main Catur");
+        addTodolist("Istirahat");
+
+        showTodolist();
+
+        viewRemoveTodolist();
+        
+        showTodolist();
     }
 }
