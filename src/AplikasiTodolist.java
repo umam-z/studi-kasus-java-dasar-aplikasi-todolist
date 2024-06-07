@@ -3,7 +3,7 @@ public class AplikasiTodolist {
     public static String[] model = new String[10];
     
     public static void main(String[] args) {
-        testAddTodolist();
+        testRemoveTodolist();
     }
 
     /**
@@ -69,16 +69,54 @@ public class AplikasiTodolist {
      * Menghapus todo list
      */
     public static boolean removeTodolist(Integer number) {
-        if ((number - 1) >= model.length) {
+        if ((number - 1) >= model.length || number < 0) {
             return false;
         }
 
         if (model[number - 1] == null) {
             return false;
         } else {
-            model[number - 1] = null;
+            // model[number - 1] = null;
+            for (int i = (number - 1); i < model.length; i++) {
+                if (i == (model.length - 1)) {
+                    model[i] = null;
+                } else {
+                    model[i] = model[i + 1];
+                }
+            }
             return true;
         }
+    }
+
+    public static void testRemoveTodolist() {
+        addTodolist("Satu");
+        addTodolist("Dua");
+        addTodolist("Tiga");
+        addTodolist("Empat");
+        addTodolist("Lima");
+        addTodolist("Enam");
+
+        // test remove di luar posisi data array postive (false)
+        var result = removeTodolist(20);
+        System.out.println(result);
+
+        // test remove di luar posisi data array negative (false)
+        result = removeTodolist(-3);
+        System.out.println(result);
+
+        // test remove data array pada posisi dengan value null (false)
+        result = removeTodolist(8);
+        System.out.println(result);
+
+        // test remove data array pada posisi dengan value not null (true)
+        result = removeTodolist(2);
+        System.out.println(result);
+        
+        // test remove data array paling ujung (true)
+        result = removeTodolist(5);
+        System.out.println(result);
+
+        showTodolist();
     }
 
     /**
