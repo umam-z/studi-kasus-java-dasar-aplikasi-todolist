@@ -5,7 +5,7 @@ public class AplikasiTodolist {
     public static String[] model = new String[10];
     
     public static void main(String[] args) {
-        testInput();
+        testViewShowTodolist();
     }
 
     /**
@@ -140,7 +140,8 @@ public class AplikasiTodolist {
      */
     public static void viewShowTodolist() {
         while (true) {
-        
+            
+            System.out.println("Todolist");
             showTodolist();
             
             System.out.println("Menu");
@@ -160,6 +161,16 @@ public class AplikasiTodolist {
                 System.out.println("Pilahan tidak dimengerti");
             }
         }
+    }
+
+    public static void testViewShowTodolist() {
+        addTodolist("Makan");
+        addTodolist("Belajar");
+        addTodolist("Coding");
+        addTodolist("Main Catur");
+        addTodolist("Istirahat");
+        addTodolist("Ulangi");
+        viewShowTodolist();
     }
 
     /**
