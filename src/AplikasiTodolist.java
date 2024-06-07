@@ -139,7 +139,27 @@ public class AplikasiTodolist {
      * Menampilkan view todo list
      */
     public static void viewShowTodolist() {
-
+        while (true) {
+        
+            showTodolist();
+            
+            System.out.println("Menu");
+            System.out.println("1. Tambah");
+            System.out.println("2. Hapus");
+            System.out.println("x. Hapus");
+    
+            String input = input("Pilih");
+            if (input.equals("1")) {
+                
+            } else if(input.equals("2")) {
+                
+            } else if(input.equals("x")) {
+                System.out.println("Bye");
+                break;
+            } else {
+                System.out.println("Pilahan tidak dimengerti");
+            }
+        }
     }
 
     /**
